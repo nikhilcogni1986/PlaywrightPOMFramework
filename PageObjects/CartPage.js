@@ -27,7 +27,7 @@ exports.CartPage = class CartPage {
         }
     }
 
-    async placeOrder() {
+    async navigateToOrderDetailsPage() {
         await this.btnPlaceOrder.click();
     }
 }
