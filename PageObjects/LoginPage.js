@@ -1,10 +1,8 @@
-// @ts-check
-/**
-
-@param {import('@playwright/test').Page} Page */
-
-exports.LoginPage = class LoginPage 
+exports.LoginPage = class LoginPage
 {
+     /**
+   * @param {import('playwright').Page} page
+   */
     constructor(page)
     {
         this.page = page;
@@ -12,7 +10,6 @@ exports.LoginPage = class LoginPage
         this.txtPassword = page.locator("#loginpassword");
         this.btnLogin = page.getByRole('button',{name:"Log in"});
         this.btnClose = page.getByRole('button',{name:"Close"});
-        this.lnkUsername = page.locator("#nameofuser");
         this.lnkLogout = page.locator("#logout2")
     }
 
@@ -36,11 +33,5 @@ exports.LoginPage = class LoginPage
         await this.enterUsername(username);
         await this.enterPassword(password);
         await this.clickLogin();
-    }
-
-    async getLoggedInUserName()
-    {
-        await console.log(this.lnkUsername.textContent());
-        return this.lnkUsername.textContent();
     }
 }

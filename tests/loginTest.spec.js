@@ -21,7 +21,7 @@ test("Vaidate the error message when no input is provided for login", async ({pa
     await loginPage.btnLogin.click();
 });
 
-test("Vaidate the error message on Signup with existing user details", async ({page})=>{
+test("Validate the error message on Signup with existing user details", async ({page})=>{
 
     //create objects
     const homePage = new HomePage(page);
@@ -46,9 +46,9 @@ test("Login to App with valid credentials", async ({page})=>{
     const loginPage = new LoginPage(page);
 
     await homePage.load(); 
-    await homePage.lnkLogin.click();
+    await homePage.navigateToLoginPage();
     await loginPage.loginToApp("nikhilrao@test.com","Password1234");
     await loginPage.lnkLogout.waitFor();
-    expect (loginPage.lnkUsername).toBeVisible();
+    await expect(await homePage.getLoggedInUserName()).toContain("nikhilrao@test.com");
 });
 
