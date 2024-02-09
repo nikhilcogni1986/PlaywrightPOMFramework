@@ -1,4 +1,5 @@
-const {expect, page} = require('@playwright/test')
+const {expect} = require('@playwright/test')
+const {LoginPage} = require("./LoginPage");
 // @ts-check
 /**
 @param {import('@playwright/test').Page} page */
@@ -22,6 +23,7 @@ exports.HomePage = class HomePage
     async navigateToLoginPage()
     {
         await this.lnkLogin.click();
+        return new LoginPage(this.page);
     }
 
     async load()
