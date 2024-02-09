@@ -1,4 +1,3 @@
-// @ts-check
 /**
 
 @param {import('@playwright/test').Page} Page */

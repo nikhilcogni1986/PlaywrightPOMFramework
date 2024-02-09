@@ -1,5 +1,3 @@
-// @ts-check
-
 exports.PlaceOrderPage = class PlaceOrderPage {
     /**
      * @param {import('playwright').Page} page

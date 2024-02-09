@@ -1,5 +1,3 @@
-// @ts-check
-
 exports.CartPage = class CartPage {
     /**
      * @param {import('playwright').Page} page

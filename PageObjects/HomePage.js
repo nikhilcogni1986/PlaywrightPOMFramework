@@ -1,5 +1,4 @@
 const {expect} = require('@playwright/test')
-// @ts-check
 /**
 @param {import('@playwright/test').Page} page */
 
