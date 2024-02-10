@@ -34,6 +34,4 @@ test("Place an order", async ({page}) => {
     await orderPage.purchaseOrder();
     expect(await orderPage.orderDetails.textContent()).toContain("Rakesh");
     expect(await orderPage.orderDetails.textContent()).toContain("5566778899008899")
-
 });
-
